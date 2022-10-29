@@ -53,34 +53,153 @@ table {
 
 
 
-body, html {
-    margin: 0;
-    padding: 0;
-
-    font-family: 'Heebo', sans-serif;
-
-    /* Prevent Highlighting for that *style* and *fanciness* */
-    /* Also why isn't all this stuff standardised across browsers come on people get a grip */
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-
-    /* Hide scrollbar for non-chromium browsers */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-
+:root {
+    --bgColour: #235A30;
+    --hoverColour: #203626;
 }
 
-/* Hide scrollbar for chromium-based browsers */
-body::-webkit-scrollbar {
+body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    touch-action: none;
+    scroll-behavior: smooth;
+
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
     display: none;
 }
 
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.fpbg {
+    width: 300vw;
+    height: 100vh;
 
+    position: absolute;
+}
+#l0 {
+    background: #befffc;
+    z-index: -6;
+}
+#l1 {
+    background: url(img\\layer1.png);
+    background-size: 100vw;
+
+    z-index: -5;
+}
+#l2 {
+    background: url(img\\layer2.png);
+    background-size: 100vw;
+    z-index: -4;
+}
+#l3 {
+    background: url(img\\layer3.png);
+    background-size: 100vw;
+    z-index: -3;
+}
+#l4 {
+    background: url(img\\trees.png);
+    background-size: 100vw;
+    z-index: -2;
+}
+
+.mainPage {
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+
+    /* background: var(--bgColour); */
+    color: #fff;
     text-align: center;
+}
+#page1 {
+    position: absolute;
+    left: 100vw;
+}
+#page2 {
+    position: absolute;
+    left: 200vw;
+}
+
+nav {
+    position: absolute;
+    color: #000;
+    height: 98vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.navbtn {
+    padding: 10px 20px 10px 20px;
+    width: 14vh;
+    height: 100%;
+    border: none;
+    text-decoration: none;
+}
+.navbtn:hover {
+    text-decoration: none;
+}
+#forwards {
+    background: url("img\\next.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#backwards {
+    background: url("img\\back.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+@media (max-width: 1500px) {
+    #title {
+        position: fixed;
+        left: 50vw;
+        top: 40vh;
+        transform: translate(-50%, -50%);
+    
+        font-size: 6rem;
+        z-index: -4;
+    
+        color: #fff;
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        position: absolute;
+        top: 70vh;
+        color: #000;
+        height: 20vh;
+        width: 100vw;
+    
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1500px) {
+    #title {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%, -50%);
+    
+        font-size: 6rem;
+        z-index: -4;
+    
+        color: #fff;
+    }
 }

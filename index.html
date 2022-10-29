@@ -5,26 +5,55 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title></title>
+    <title>Web Project</title>
 </head>
 <body>
-    <div class="container">
-        <div id="item">
-            Text 1
-        </div>
-        <br>
-        <br>
-        <br>
-        <!-- TODO: golang and mongo stuff -->
-        <form action=""> 
-            <label for="itemBody">Enter Item:</label><br>
-            <input type="text" id="itemBody" name="fname" placeholder="TODO Item">
-            <input type="submit" id="submit" value="Submit">
-        </form>
+    <div class="main">
+        <div class="fpbg" id="l0"></div>
+        <div class="fpbg" id="l1"></div>
+        <div class="fpbg" id="l2"></div>
+        <div class="fpbg" id="l3"></div>
+        <div class="fpbg" id="l4"></div>
+        <section class="frontpage" id="page0">
+            <div id="title">
+                <h1>A Title</h1>
+            </div>
+            <nav>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="backwards" onclick=" location.href='#page2'"></button>
+                </div>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="forwards" onclick="location.href='#page1'"></button>
+                </div>
+            </nav>
+        </section>
+        <section class="mainPage" id="page1">
+            About
+            <nav>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="backwards" onclick=" location.href='#page0'"></button>
+                </div>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="forwards" onclick="location.href='#page2'"></button>
+                </div>
+            </nav>
+        </section>
+        <section class="mainPage" id="page2">
+            Contact
+            <nav>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="backwards" onclick=" location.href='#page1'"></button>
+                </div>
+                <div class="buttonNoBorder">
+                    <button class="navbtn" id="forwards" onclick="location.href='#page0'"></button>
+                </div>
+            </nav>
+        </section>
     </div>
 
-    <script src="CreateItem.js"></script>
+    <script src="scroll.js"></script>
 </body>
 </html>
