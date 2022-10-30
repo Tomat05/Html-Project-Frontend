@@ -21,8 +21,8 @@ window.addEventListener('scroll', function() {
 function pic() {
     let seasons = ["spring", "summer", "autumn", "winter"];
     
-    let season = seasons[Math.floor(Math.random()*seasons.length)];
-    // let season = 'winter';
+    // let season = seasons[Math.floor(Math.random()*seasons.length)];
+    let season = 'autumn';
 
     layer1.style.background = "url(img/" + season + "/layer1.png)";
     layer1.style.backgroundSize = 'auto 100vh';
