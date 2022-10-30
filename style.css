@@ -186,12 +186,68 @@ nav {
     color: #111;
 }
 
+.subtitle {
+    position: absolute;
+    left: 50vw;
+    top: 2vh;
+    transform: translate(-50%, 0%);
+    z-index: -3;
+
+    font-size: 3rem;
+
+    color: #111;
+}
+
+.image {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: #000 solid 3px;
+    border-radius: 100%;
+    padding: 0px;
+    background: url(img\\bramble.png);
+    background-position: center;
+    background-size: 130%;
+}
+
+.content {
+    border: #000 solid 5px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    width: 80vw;
+    height: 70vh;
+    font-size: 1rem;
+}
+/* @media (min-width: 606px) */
+
+@media (min-width: 547px) {
+    .image {
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        top: 7.5vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border: #000 solid 3px;
+        border-radius: 100%;
+        padding: 0px;
+        background: url(img\\bramble.png);
+        background-position: center;
+        background-size: 130%;
+    }
+}
+
 
 
 @media (max-width: 600px) {
     nav {
         position: absolute;
-        top: 70vh;
+        top: 80vh;
         height: 20vh;
         width: 100vw;
     

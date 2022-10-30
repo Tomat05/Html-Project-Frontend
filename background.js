@@ -7,7 +7,7 @@ let layer3 = document.getElementById('l3');
 let layer4 = document.getElementById('l4');
 let titles = document.getElementsByClassName('title');
 
-
+// Parallax effect
 window.addEventListener('scroll', function() {
     let scroll = window.scrollX;
 
@@ -17,6 +17,7 @@ window.addEventListener('scroll', function() {
     layer4.style.left = scroll - (scroll / 4) + 'px';
 });
 
+// Change backgrounds on refresh for *spice*
 function pic() {
     let seasons = ["spring", "summer", "autumn", "winter"];
     
