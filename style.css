@@ -53,10 +53,10 @@ table {
 
 
 
-:root {
+/* :root {
     --bgColour: #235A30;
     --hoverColour: #203626;
-}
+} */
 
 body, html {
     overflow-x: hidden;
@@ -66,6 +66,11 @@ body, html {
 
     font-family: 'Heebo', sans-serif;
     text-align: center;
+
+    /* Prevent Highlighting */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
@@ -87,24 +92,24 @@ body, html {
     z-index: -6;
 }
 #l1 {
-    background: url(img\\layer1.png);
-    background-size: 100vw;
+    background: url(img\\summer\\layer1.png);
+    background-size: auto 100vh;
 
     z-index: -5;
 }
 #l2 {
-    background: url(img\\layer2.png);
-    background-size: 100vw;
+    background: url(img\\summer\\layer2.png);
+    background-size: auto 100vh;
     z-index: -4;
 }
 #l3 {
-    background: url(img\\layer3.png);
-    background-size: 100vw;
+    background: url(img\\summer\\layer3.png);
+    background-size: auto 100vh;
     z-index: -3;
 }
 #l4 {
-    background: url(img\\trees.png);
-    background-size: 100vw;
+    background: url(img\\summer\\trees.png);
+    background-size: auto 100vh;
     z-index: -2;
 }
 
@@ -113,7 +118,8 @@ body, html {
     width: 100vw;
     z-index: -1;
 
-    /* background: var(--bgColour); */
+    font-size: 6rem;
+
     color: #fff;
     text-align: center;
 }
@@ -144,43 +150,48 @@ nav {
     border: none;
     text-decoration: none;
 }
-.navbtn:hover {
-    text-decoration: none;
-}
 #forwards {
     background: url("img\\next.png");
+    transition: all 0.2s ease-in-out;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+}
+#forwards:hover {
+    transition: all 0.2s ease-in-out;
+    background-size: 115%;
 }
 #backwards {
     background: url("img\\back.png");
+    transition: all 0.2s ease-in-out;;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
-
-
-
-@media (max-width: 1500px) {
-    #title {
-        position: fixed;
-        left: 50vw;
-        top: 40vh;
-        transform: translate(-50%, -50%);
-    
-        font-size: 6rem;
-        z-index: -4;
-    
-        color: #fff;
-    }
+#backwards:hover {
+    transition: all 0.2s ease-in-out;
+    background-size: 115%;
 }
 
-@media (max-width: 750px) {
+
+.title {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+
+    font-size: 6rem;
+
+    color: #111;
+}
+
+
+
+@media (max-width: 600px) {
     nav {
         position: absolute;
         top: 70vh;
-        color: #000;
         height: 20vh;
         width: 100vw;
     
@@ -188,18 +199,30 @@ nav {
         justify-content: space-between;
         z-index: 1;
     }
+
+    .title {
+        position: absolute;
+        left: 50vw;
+        top: 40vh;
+        transform: translate(-50%, -50%);
+        z-index: -3;
+    
+        font-size: 4.5rem;
+    
+        color: #111;
+    }
 }
 
-@media (min-width: 1500px) {
-    #title {
-        position: fixed;
+@media (max-height: 850px) {
+    .title {
+        position: absolute;
         left: 50vw;
-        top: 50vh;
+        top: 40vh;
         transform: translate(-50%, -50%);
+        z-index: -3;
     
-        font-size: 6rem;
-        z-index: -4;
+        font-size: 4.5rem;
     
-        color: #fff;
+        color: #111;
     }
 }

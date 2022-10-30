@@ -8,18 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script> -->
+
     <title>Web Project</title>
 </head>
 <body>
     <div class="main">
+        <!-- BACKGROUND STUFF -->
         <div class="fpbg" id="l0"></div>
         <div class="fpbg" id="l1"></div>
         <div class="fpbg" id="l2"></div>
         <div class="fpbg" id="l3"></div>
         <div class="fpbg" id="l4"></div>
+        <!-- FRONT PAGE -->
         <section class="frontpage" id="page0">
-            <div id="title">
-                <h1>A Title</h1>
+            <div class="title">
+                <h1>Bramble's Squirrel Services</h1>
             </div>
             <nav>
                 <div class="buttonNoBorder">
@@ -30,8 +34,11 @@
                 </div>
             </nav>
         </section>
+        <!-- PAGE 1 -->
         <section class="mainPage" id="page1">
-            About
+            <div class="title">
+                <h1>About Us</h1>
+            </div>
             <nav>
                 <div class="buttonNoBorder">
                     <button class="navbtn" id="backwards" onclick=" location.href='#page0'"></button>
@@ -41,8 +48,11 @@
                 </div>
             </nav>
         </section>
+        <!-- PAGE 2 -->
         <section class="mainPage" id="page2">
-            Contact
+            <div class="title">
+                <h1>Yet Another Page</h1>
+            </div>
             <nav>
                 <div class="buttonNoBorder">
                     <button class="navbtn" id="backwards" onclick=" location.href='#page1'"></button>
@@ -54,6 +64,6 @@
         </section>
     </div>
 
-    <script src="scroll.js"></script>
+    <script src="background.js"></script>
 </body>
 </html>
