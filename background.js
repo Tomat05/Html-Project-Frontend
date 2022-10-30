@@ -43,15 +43,9 @@ function pic() {
 
         case 'winter':
             layer0.style.background = '#b5c2d3';
-            // for (let i = 0; i < titles.length; i++) {
-            //     titles[i].style.color = '#000';
-            // }
             break
     
         default:
-            // for (let i = 0; i < titles.length; i++) {
-            //     titles[i].style.color = '#000';
-            // }
             break;
     }
 }
