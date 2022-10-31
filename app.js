@@ -9,6 +9,14 @@ let titles = document.getElementsByClassName('title');
 
 let containers = document.getElementsByClassName('content');
 
+// Scroll stuff
+window.addEventListener('scroll', function() {
+    parallax();
+    fade();
+});
+
+//#region PANEL
+
 // Fade panels in
 function fadeIn(container) {
     let duration = 0.3;
@@ -31,39 +39,44 @@ for (let i = 0; i < containers.length; i++) {
     fading[i] = false;
 }
 
-let page = 0;
-numPages = 2;
+// fade stuff in for extra *spice*
+function fade() {
+    // Ensure page matches the page the site is on
+    let href = window.location.href;
+    let page = href.substring(href.length - 1);
 
-// Scroll stuff
-window.addEventListener('scroll', function() {
+    for (let i = 0; i < containers.length; i++) {
+        let bound = containers[i].getBoundingClientRect();
+
+        if (containers[i].id == ("c" + page) && !fading[i] && bound.left <= 200) {
+            fading[i] = true;
+            fadeIn(containers[i]);
+        }
+    }
+}
+//#endregion
+
+//#region BACKGROUND
+
+//#region PARALLAX
+function parallax() {
     let scroll = window.scrollX;;
 
     layer1.style.left = scroll - (scroll / 32) + 'px';
     layer2.style.left = scroll - (scroll / 16) + 'px';
     layer3.style.left = scroll - (scroll / 8) + 'px';
     layer4.style.left = scroll - (scroll / 4) + 'px';
+}
+//#endregion
 
-    for (let i = 0; i < containers.length; i++) {
-        let bound = containers[i].getBoundingClientRect();
-
-        if (bound.right <= width && !fading[i] && (page - 1) == i) {
-            fading[i] = true;
-            fadeIn(containers[i]);
-        // } else if (bound.left >= width) {
-        //     // fading[i] = false;
-        //     containers[i].style.opacity = 0;
-        // }
-        // console.log(fading[i]);
-        }
-    }
-});
+//#region CHANGING BACKGROUND
 
 // Change backgrounds on refresh for *spice*
 function pic() {
-    let seasons = ["spring", "summer", "autumn", "winter"];
+    let seasons = [/*"spring", */"summer", "autumn", "winter"];
     
-    // let season = seasons[Math.floor(Math.random()*seasons.length)];
-    let season = 'autumn';
+    let season = seasons[Math.floor(Math.random()*seasons.length)];
+    // let season = 'autumn';
 
     layer1.style.background = "url(img/" + season + "/layer1.png)";
     layer1.style.backgroundSize = 'auto 100vh';
@@ -93,3 +106,5 @@ function pic() {
 }
 
 pic();
+//#endregion
+//#endregion

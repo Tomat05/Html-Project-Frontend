@@ -173,7 +173,6 @@ nav {
     background-size: 115%;
 }
 
-
 .title {
     position: absolute;
     left: 50vw;
@@ -190,8 +189,6 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; 
 
     font-size: 10rem;
     background: #88888813;
@@ -199,10 +196,10 @@ nav {
     border-radius: 20px;
     position: absolute;
     left: 50%;
-    top: 2vh;
-    transform: translate(-50%, 0);
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 80vw;
-    height: 70vh;
+    height: 90vh;
     font-size: 1rem;
     opacity: 0;
     color: #111;
@@ -220,28 +217,89 @@ nav {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
-.tlt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.tl {
+    padding-top: 2rem;
     grid-area: 1 / 1 / 2 / 2;
     border-top: 1px solid #111;
-    border-right: 1px solid #111;
-    /* border: #111 solid 5px; */
-}
-.tlb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: 2 / 1 / 3 / 2;
     border-bottom: 1px solid #111;
     border-right: 1px solid #111;
-    /* border: #111 solid 5px; */
+}
+.bl {
+    grid-area: 2 / 1 / 3 / 2;
+    border-top: 1px solid #111;
+    border-right: 1px solid #111;
+}
+.tr {
+    grid-area: 1 / 2 / 2 / 3;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    border-left: 1px solid #111;
+}
+.br {
+    grid-area: 2 / 2 / 3 / 3;
+    border-top: 1px solid #111;
+    border-left: 1px solid #111;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px; 
+    padding: 5px;
+}
+#brtl {
+    grid-area: 1 / 1 / 3 / 2;
+    /* border: 2px solid #ff0000; */
+    background: url(img\\bramble\\thumbnail_20220814_163109.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+#brtm {
+    grid-area: 1 / 2 / 3 / 3;
+    /* border: 2px solid #00ff00; */
+    background: url(img\\bramble\\Evil_Squirrel.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+#brtr {
+    grid-area: 1 / 3 / 2 / 4;
+    /* border: 2px solid #0000ff; */
+    background: url(img\\bramble\\Bramble_3.png);
+    background-size: 100%;
+    background-position: center;
+}
+#brbl {
+    grid-area: 3 / 1 / 4 / 3;
+    /* border: 2px solid #ffff00; */
+    background: url(img\\bramble\\Bramble_1.png);
+    background-size: 100%;
+    background-position: center;
+}
+#brbr {
+    grid-area: 2 / 3 / 4 / 4;
+    /* border: 2px solid #ff00ff; */
+    background: url(img\\bramble\\thumbnail_IMG_20221020_225537_789.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.wrap {
+    height: 50%;
+    transform: translate(0, 50%);
+    padding: 0rem 2rem;
+}
+.header {
+    font-size: 2rem;
+}
+.caption {
+    font-size: 1.5rem;
 }
 #profileimg {
-    height: 90%;
+    height: 12rem;
+    margin: auto;
     aspect-ratio: 1/1;
     background: url(img\\bramble.png);
     background-size: 130%;
@@ -250,57 +308,9 @@ nav {
     border: 2px solid #111;
     border-radius: 100%;
 }
-.blt {
-    grid-area: 3 / 1 / 4 / 2;
-    border-top: 1px solid #111;
-    border-right: 1px solid #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.blb {
-    padding: 1rem;
-    grid-area: 4 / 1 / 5 / 2;
-    border-right: 1px solid #111;
-}
-.trt {
-    grid-area: 1 / 2 / 2 / 3;
-    border-top: 1px solid #111;
-    border-left: 1px solid #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.trb {
-    padding: 1rem;
-    /* align-items: center; */
-    grid-area: 2 / 2 / 3 / 3;
-    border-bottom: 1px solid #111;
-    border-left: 1px solid #111;
-}
-.brt {
-    grid-area: 3 / 2 / 4 / 3;
-    border-top: 1px solid #111;
-    border-left: 1px solid #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.brb {
-    padding: 1rem;
-    justify-content: center;
-    grid-area: 4 / 2 / 5 / 3;
-    border-left: 1px solid #111;
-}
 
-.header {
-    font-size: 2rem;
-}
-.caption {
-    font-size: 1.5rem;
-}
-
-@media (min-aspect-ratio: 4/3) {
+/* It was going to be all fancy and responsive but I didn't have time :( */
+/* @media (min-aspect-ratio: 4/3) {
     .content {
         position: absolute;
         height: 90vh;
@@ -341,4 +351,4 @@ nav {
     .bl { grid-area: 3 / 1 / 4 / 2; }
     .tr { grid-area: 4 / 1 / 5 / 2; }
     .br { grid-area: 5 / 1 / 6 / 2; } 
-}
+} */

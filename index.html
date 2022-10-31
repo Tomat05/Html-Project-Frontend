@@ -29,51 +29,67 @@
                     <button class="navbtn" id="backwards" onclick=" location.href='#page2', forwards = true, backwards = false, page = numPages"></button>
                 </div>
                 <div class="buttonNoBorder">
-                    <button class="navbtn" id="forwards" onclick="location.href='#page1', forwards = true, backwards = false, page += 1"></button>
+                    <button class="navbtn" id="forwards" onclick="location.href='#page1', forwards = true, backwards = false, page = 1"></button>
                 </div>
             </nav>
         </section>
 <!-- PAGE 1 -->
         <section class="mainPage" id="page1">
-            <div class="content">
+            <div class="content" id="c1">
                 <div class="subtitle">
                     <h1>About Us</h1>
                 </div>
                 <div class="grid">
-                    <div class="tlt">
+                    <div class="tl">
                         <div id="profileimg"></div>
-                    </div>
-                    <div class="tlb">
+                        <br>
+                        <br>
                         <p class="caption">"Squirrels are evil, they must be stopped at all cost" <br>- Bramble</p>
                     </div>
-                    <div class="blt">Bottom Left Top</div>
-                    <div class="blb">
-                        <h1 class="header">Our History</h1>
-                        <br>
-                        <p style="text-align: left; line-height: 1.6;">Started in 2017, Bramble's Squirrel Service has been slowly but surely decreasing the population of squirrels worldwide. Throughout the last five years, we have made leaps and bounds in squirrel-catching technology including that have completely changed the game. Since we first began, we are now able to catch squirrels more efficiently than ever before!</p>
+                    <div class="bl">
+                        <div class="wrap">
+                            <h1 class="header">Our History</h1>
+                            <br>
+                            <p style="line-height: 1.6; text-align: justify;">Started in 2017, Bramble's Squirrel Service has been 
+                                slowly but surely decreasing the population of squirrels worldwide. Throughout the last five 
+                                years, we have made leaps and bounds in squirrel-catching technology including that have 
+                                completely changed the game. Since we first began, we are now able to catch squirrels more 
+                                efficiently than ever before!</p>
+                        </div>
                     </div>
-                    <div class="trt">Top Right Top</div>
-                    <div class="trb">
-                        <h1 class="header">Our Mission</h1>
+                    <div class="tr">
+                        <div class="wrap">
+                            <h1 class="header">Our Mission</h1>
+                            <br>
+                            <bl style="line-height: 1.6; text-align: justify;">
+                                <li>We aim to cut all squirrels in half by 2026</li>
+                                <li>We strive for a squirrel-free society where trees are free to not have squirrels in them</li>
+                                <li>We firmly believe that squirrels are the cause of all evil and strife in the world and therefore 
+                                    must be eradicated once and for all</li>
+                            </bl>
+                        </div>
                     </div>
-                    <div class="brt">Bottom Right Top</div>
-                    <div class="brb">
-                        <h1 class="header">Bottom Right Bottom</h1>
+                    <div class="br">
+                        <div id="brtl"></div>
+                        <div id="brtm"></div>
+                        <div id="brtr"></div>
+                        <div id="brbl"></div>
+                        <div id="brbr"></div>
                     </div>
                 </div>
             </div>
             <nav>
                 <div class="buttonNoBorder">
-                    <button class="navbtn" id="backwards" onclick=" location.href='#page0', backwards = true, forwards = false, page -= 1"></button>
+                    <button class="navbtn" id="backwards" onclick=" location.href='#page0', backwards = true, forwards = false, page = 0"></button>
                 </div>
                 <div class="buttonNoBorder">
-                    <button class="navbtn" id="forwards" onclick="location.href='#page2', forwards = true, backwards = false, page += 1"></button>
+                    <button class="navbtn" id="forwards" onclick="location.href='#page2', forwards = true, backwards = false, page = 2"></button>
                 </div>
             </nav>
         </section>
 <!-- PAGE 2 -->
         <section class="mainPage" id="page2">
-            <div class="content">
+            <div class="content" id="c2">
                 <div class="subtitle">
                     <h1>Yet Another Page</h1>
                 </div>
@@ -90,7 +106,7 @@
             </div>
             <nav>
                 <div class="buttonNoBorder">
-                    <button class="navbtn" id="backwards" onclick=" location.href='#page1', backwards = true, forwards = false, page -= 1"></button>
+                    <button class="navbtn" id="backwards" onclick=" location.href='#page1', backwards = true, forwards = false, page = 1"></button>
                 </div>
                 <div class="buttonNoBorder">
                     <button class="navbtn" id="forwards" onclick="location.href='#page0', backwards = true, forwards = false, page = 0"></button>
