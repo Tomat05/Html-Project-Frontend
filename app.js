@@ -39,6 +39,8 @@ for (let i = 0; i < containers.length; i++) {
     fading[i] = false;
 }
 
+numPages = 2;
+
 // fade stuff in for extra *spice*
 function fade() {
     // Ensure page matches the page the site is on
@@ -73,7 +75,7 @@ function parallax() {
 
 // Change backgrounds on refresh for *spice*
 function pic() {
-    let seasons = [/*"spring", */"summer", "autumn", "winter"];
+    let seasons = ["spring", "summer", "autumn", "winter"];
     
     let season = seasons[Math.floor(Math.random()*seasons.length)];
     // let season = 'autumn';

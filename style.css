@@ -7,7 +7,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, /*iframe,*/
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -53,11 +53,6 @@ table {
 
 
 
-/* :root {
-    --bgColour: #235A30;
-    --hoverColour: #203626;
-} */
-
 body, html {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -79,6 +74,10 @@ body, html {
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
     display: none;
+}
+
+#page2 {
+    font-size: 2rem;
 }
 
 .fpbg {
@@ -137,10 +136,15 @@ nav {
     color: #111;
     height: 98vh;
     width: 100vw;
+    top: 0%;
 
     display: flex;
     justify-content: space-between;
     z-index: 1;
+}
+/* Loosing brain cells */
+#ThE-eNd {
+    top: 30%;
 }
 
 .navbtn {
@@ -212,6 +216,9 @@ nav {
     font-size: 3rem;
     color: #111;
     border-bottom: 1px solid #111;
+}
+#Page2Sub {
+    border-bottom: 2px solid #111;
 }
 
 .grid {
